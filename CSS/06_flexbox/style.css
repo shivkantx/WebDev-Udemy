@@ -1,0 +1,78 @@
+.body {
+  margin: 0;
+  padding: 0;
+  font: 1em sans-serif;
+}
+.container {
+  background-color: #f0f0f0;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #333;
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.flexbox-container {
+  display: flex;
+  height: 200px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.pastel-1 {
+  background-color: #ff9999;
+}
+.pastel-2 {
+  background-color: #99ff99;
+}
+.pastel-3 {
+  background-color: #9999ff;
+}
+.pastel-4 {
+  background-color: #ffff99;
+}
+.pastel-5 {
+  background-color: #ff99ff;
+}
+#FC1 {
+  display: flex;
+  flex-direction: row;
+}
+#FC2 {
+  display: flex;
+  flex-direction: column;
+}
+#FC3 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#FC4 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#FC5 {
+  display: flex;
+  justify-content: flex-start;
+}
+#FC6 {
+  display: flex;
+  justify-content: flex-end;
+}
+#FC7 {
+  display: flex;
+  justify-content: center;
+}
+#FC8 {
+  display: flex;
+  justify-content: space-between;
+}
+#FC9 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
