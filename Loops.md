@@ -132,6 +132,74 @@ const nums = [1, 2, 3, 4];
 const sum = nums.reduce((acc, n) => acc + n, 0);
 console.log(sum); // 10
 ```
+# 🔽 Understanding `.reduce()` in JavaScript
+
+`.reduce()` is an array method used to reduce an array into a single value, such as a sum, product, or string.
+
+---
+
+## 🔧 Syntax
+
+```javascript
+array.reduce((accumulator, currentValue) => newAccumulator, initialValue);
+```
+
+* **accumulator** – the running total or result
+* **currentValue** – the current item in the array
+* **initialValue** – the starting value
+
+---
+
+## 📌 Example: Sum All Numbers
+
+```javascript
+const arr = [1, 2, 3, 4];
+const sum = arr.reduce((acc, num) => acc + num, 0);
+console.log(sum); // 10
+```
+
+---
+
+## 🧠 Sum Positive Numbers Only
+
+```javascript
+const sumPositiveNumbers = arr =>
+  arr.filter(n => n > 0).reduce((sum, n) => sum + n, 0);
+```
+
+### Example:
+
+```javascript
+sumPositiveNumbers([1, -2, 3, 0, -5, 7]); // ➞ 11
+```
+
+---
+
+## 🔁 Equivalent with `for` Loop
+
+```javascript
+function sumPositiveNumbers(arr) {
+  let sum = 0;
+  for (let n of arr) {
+    if (n > 0) sum += n;
+  }
+  return sum;
+}
+```
+
+---
+
+## ✅ When to Use `.reduce()`
+
+* Totals (sum, product)
+* Combine values or objects
+* Flatten arrays
+
+Use `.reduce()` to compress an array into one value.
+
+---
+
+🎯 **Tip:** Always provide an `initialValue` to avoid bugs.
 
 ---
 
