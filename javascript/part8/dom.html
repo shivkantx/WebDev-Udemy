@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        color: #fff;
+        background-color: #1a1a1a;
+        text-align: center;
+      }
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+        color: #1a1a1a;
+      }
+      .hidden {
+        display: none;
+      }
+      #example-1 {
+        border: 2px #fff;
+      }
+    </style>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <h1>JavaScript DOM fun example</h1>
+
+    <!-- Example 1: Accessing Dom Element -->
+    <section id="example-1">
+      <h2>Accessing Dom Element</h2>
+      <p id="myParagraph">This is paragraph. click the button to change me!</p>
+      <button id="changeTextButton">Change Text</button>
+    </section>
+
+    <!-- Example 2: Traversing Dom -->
+    <section id="example-2">
+      <h2>Traversing the Dom</h2>
+      <ul type="none" id="citiesList">
+        <li>New York</li>
+        <li>Tokyo</li>
+        <li>Paris</li>
+        <li>London</li>
+        <button id="highlightFirstCity">Highlight first City</button>
+      </ul>
+    </section>
+
+    <!-- Example 3: Manupulating DOM Element -->
+    <section id="example-3">
+      <h2>Manupulating DOM Element</h2>
+      <div id="coffeeOrder">Order : <span id="coffeeType">Latte</span></div>
+      <button id="changeOrder">Change Order to Espresso</button>
+    </section>
+
+    <!-- Example 4 : Creating and inserting Elements -->
+    <section id="example-3">
+      <h2>Creating and inserting Elements</h2>
+      <button id="addNewIten">Add a new Item t the shopping List</button>
+      <ul id="shoppingList" type="none">
+        <li>Bread</li>
+        <li>Milk</li>
+      </ul>
+    </section>
+
+    <!-- example 5 : Removing DOM Elements -->
+    <section id="example-5">
+      <h2>Removing DOM Elements</h2>
+      <ul id="taskList" type="none">
+        <li>Task 1</li>
+        <li>Task 2</li>
+        <li>Task 3</li>
+      </ul>
+      <button id="removeLastTask">Remove Last Task from Shopping List</button>
+    </section>
+  </body>
+</html>
