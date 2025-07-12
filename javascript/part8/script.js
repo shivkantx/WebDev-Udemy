@@ -39,3 +39,39 @@ document
     let taskList = document.getElementById("taskList");
     taskList.lastChild.remove();
   });
+
+// example - 6
+document.getElementById("clickMeButton").addEventListener("click", function () {
+  alert("'click me!' Button Clicked!");
+});
+
+// example - 7
+document.getElementById("teaList").addEventListener("click", function (event) {
+  if (event.target && event.target.matches(".teaItem"))
+    alert("You selected : " + event.target.textContent);
+});
+
+// example - 8
+document
+  .getElementById("feedbackForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    let feedback = document.getElementById("FeedbackInput").value;
+    console.log(feedback);
+    document.getElementById(
+      "FeedbackDisplay"
+    ).textContent = `Your Feedback : ${feedback}`;
+  });
+
+// example - 9
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("domStatus").textContent = "dom loaded succesfully!";
+});
+
+// example - 10
+document
+  .getElementById("toggleHighlight")
+  .addEventListener("click", function () {
+    let descriptionText = document.getElementById("descriptionText");
+    descriptionText.classList.toggle("highlight");
+  });
