@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Expense Tracker</h1>
+      <form action="" id="expense-form">
+        <input
+          type="text"
+          id="expance-name"
+          placeholder="expance name"
+          required
+        />
+
+        <input
+          type="number"
+          id="expense-amount"
+          placeholder="expanse amount"
+          required
+        />
+        <button type="submit">Add Expense</button>
+      </form>
+      <h2>Expance</h2>
+      <ul id="expance-list"></ul>
+      <div id="total">
+        <h3>Total : <span id="total-amount">0.00</span></h3>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
