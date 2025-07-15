@@ -1,0 +1,121 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom right, #1e1f2f, #2d2f45);
+  color: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* Container */
+.container {
+  background-color: #ffffff;
+  padding: 48px 36px;
+  max-width: 520px;
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #6d28d9; /* violet */
+  margin-bottom: 28px;
+}
+
+/* Question Section */
+#question-conatiner {
+  margin-top: 20px;
+}
+
+#question-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+/* Choices */
+#choices-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+}
+
+#choices-list li {
+  background-color: #e5e7eb; /* cool gray */
+  color: #1f2937;
+  padding: 14px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+#choices-list li:hover {
+  background-color: #d1d5db;
+  border-color: #7c3aed;
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+}
+
+/* Buttons */
+button {
+  padding: 12px 22px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background: linear-gradient(to right, #7c3aed, #5b21b6);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 28px;
+}
+
+button:hover {
+  background: linear-gradient(to right, #a78bfa, #7c3aed);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+}
+
+/* Result Section */
+#result-container {
+  margin-top: 30px;
+}
+
+#score {
+  font-size: 1.6rem;
+  color: #6d28d9;
+  font-weight: bold;
+  margin: 16px 0 24px;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
+#choices-list li.selected {
+  background-color: #7c3aed;
+  color: #ffffff;
+  border-color: #5b21b6;
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.3);
+}
