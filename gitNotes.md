@@ -1,12 +1,16 @@
-# 1. git status
+# Git & Bash Command Notes
 
-Syntax:
+---
+
+## 1. `git status`
+
+**Syntax:**
 
 ```bash
 git status
 ```
 
-Example:
+**Example:**
 
 ```bash
 $ cd /mnt/chromeos/MyFiles/Downloads/gitCheck/gitone
@@ -14,20 +18,22 @@ $ git status
 On branch master
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-	testone.txt
-	testtwo.txt
+    testone.txt
+    testtwo.txt
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-# 2. git add
+---
 
-Syntax:
+## 2. `git add`
+
+**Syntax:**
 
 ```bash
 git add <filename>
 ```
 
-Example:
+**Example:**
 
 ```bash
 $ git add testone.txt
@@ -36,15 +42,17 @@ Changes to be committed:
   new file:   testone.txt
 ```
 
-# 3. git commit
+---
 
-Syntax:
+## 3. `git commit`
+
+**Syntax:**
 
 ```bash
 git commit -m "your message"
 ```
 
-Example:
+**Example:**
 
 ```bash
 $ git commit -m "added testone.txt file"
@@ -53,15 +61,17 @@ $ git commit -m "added testone.txt file"
  create mode 100644 testone.txt
 ```
 
-# 4. git log
+---
 
-Syntax:
+## 4. `git log`
+
+**Syntax:**
 
 ```bash
 git log
 ```
 
-Example:
+**Example:**
 
 ```bash
 $ git log
@@ -69,15 +79,17 @@ commit 091313b... add second file to code base
 commit f4c9b9... added testone.txt file
 ```
 
-# 5. git log --oneline
+---
 
-Syntax:
+## 5. `git log --oneline`
+
+**Syntax:**
 
 ```bash
 git log --oneline
 ```
 
-Example:
+**Example:**
 
 ```bash
 $ git log --oneline
@@ -85,59 +97,67 @@ $ git log --oneline
 f4c9b98 added testone.txt file
 ```
 
-# 6. touch
+---
 
-Syntax:
+## 6. `touch`
+
+**Syntax:**
 
 ```bash
 touch <filename1> <filename2>
 ```
 
-Example:
+**Example:**
 
 ```bash
 $ touch testone.txt testtwo.txt
 ```
 
-# 7. pwd
+---
 
-Syntax:
+## 7. `pwd`
+
+**Syntax:**
 
 ```bash
 pwd
 ```
 
-Example:
+**Example:**
 
 ```bash
 $ pwd
 /mnt/chromeos/MyFiles/Downloads/gitCheck/gitone
 ```
 
-# 8. ls
+---
 
-Syntax:
+## 8. `ls`
+
+**Syntax:**
 
 ```bash
 ls
 ```
 
-Example:
+**Example:**
 
 ```bash
 $ ls
 gitine  gitthree  gittwo
 ```
 
-# 9. cd
+---
 
-Syntax:
+## 9. `cd`
+
+**Syntax:**
 
 ```bash
 cd <foldername>
 ```
 
-Example:
+**Example:**
 
 ```bash
 $ cd gitone
@@ -145,15 +165,17 @@ $ pwd
 /mnt/chromeos/MyFiles/Downloads/gitCheck/gitone
 ```
 
-# 10. mkdir
+---
 
-Syntax:
+## 10. `mkdir`
+
+**Syntax:**
 
 ```bash
 mkdir <directory_name>
 ```
 
-Example:
+**Example:**
 
 ```bash
 $ mkdir newProject
@@ -161,25 +183,29 @@ $ ls
 gitine  gitthree  gittwo  newProject
 ```
 
-# 11. git config --global core.editor "code ."
+---
 
-Syntax:
+## 11. `git config --global core.editor "code ."`
+
+**Syntax:**
 
 ```bash
 git config --global core.editor "code ."
 ```
 
-Example:
+**Example:**
 
 ```bash
 $ git config --global core.editor "code ."
 ```
 
-# 12. .gitignore file
+---
 
-Syntax:
-Create a file named `.gitignore` and list files to ignore.
-Example:
+## 12. `.gitignore` file
+
+**Syntax:** Create a file named `.gitignore` and list files to ignore.
+
+**Example:**
 
 ```bash
 $ echo "node_modules/" >> .gitignore
@@ -188,7 +214,7 @@ $ git status
 On branch master
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-	.gitignore
+    .gitignore
 $ git add .gitignore
 $ git commit -m "added .gitignore file"
 [master abc1234] added .gitignore file
@@ -196,15 +222,17 @@ $ git commit -m "added .gitignore file"
  create mode 100644 .gitignore
 ```
 
-# 13. git init
+---
 
-Syntax:
+## 13. `git init`
+
+**Syntax:**
 
 ```bash
 git init
 ```
 
-Example:
+**Example:**
 
 ```bash
 $ cd /mnt/chromeos/MyFiles/Downloads/gitCheck/gitone
@@ -212,78 +240,41 @@ $ git init
 Initialized empty Git repository in /mnt/chromeos/MyFiles/Downloads/gitCheck/gitone/.git/
 ```
 
-# Git & Bash Command Notes
-
 ---
 
-## git add .
+## 14. `git add .`
 
-Stages all modified and new files in the current directory (and subdirectories) for commit.
+Stages all modified and new files in the current directory.
 
-**Syntax**:
+**Syntax:**
 
 ```bash
 git add .
 ```
 
-**Example**:
+**Example:**
 
 ```bash
 shivkant639624@penguin:~/Projects/WebDev-Udemy$ git add .
 ```
 
-**Output**:
-
-```bash
-# No output if successful
-```
-
 ---
 
-## git status
+## 15. `git commit -m`
 
-Shows the working directory and staging area status.
-
-**Syntax**:
-
-```bash
-git status
-```
-
-**Example**:
-
-```bash
-shivkant639624@penguin:~/Projects/WebDev-Udemy$ git status
-```
-
-**Output**:
-
-```bash
-On branch main
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	new file:   gitNotes.md
-```
-
----
-
-## git commit -m "message"
-
-Records staged changes to the local repo with a commit message.
-
-**Syntax**:
+**Syntax:**
 
 ```bash
 git commit -m "your message"
 ```
 
-**Example**:
+**Example:**
 
 ```bash
 git commit -m "gitNotes added in folder"
 ```
 
-**Output**:
+**Output:**
 
 ```bash
 [main 1bffe3b] gitNotes added in folder
@@ -293,23 +284,21 @@ git commit -m "gitNotes added in folder"
 
 ---
 
-## git push origin main
+## 16. `git push origin main`
 
-Pushes local commits to the main branch on the remote repo.
-
-**Syntax**:
+**Syntax:**
 
 ```bash
 git push origin main
 ```
 
-**Example**:
+**Example:**
 
 ```bash
 git push origin main
 ```
 
-**Output**:
+**Output:**
 
 ```bash
 ! [rejected]        main -> main (fetch first)
@@ -320,23 +309,21 @@ not have locally.
 
 ---
 
-## git pull origin main
+## 17. `git pull origin main`
 
-Fetches and merges changes from remote main branch to your current branch.
-
-**Syntax**:
+**Syntax:**
 
 ```bash
 git pull origin main
 ```
 
-**Example**:
+**Example:**
 
 ```bash
 git pull origin main
 ```
 
-**Output**:
+**Output:**
 
 ```bash
 Updating 9cb0..1bff
@@ -346,23 +333,21 @@ Fast-forward
 
 ---
 
-## git branch
+## 18. `git branch`
 
-Lists all branches in the current repository.
-
-**Syntax**:
+**Syntax:**
 
 ```bash
 git branch
 ```
 
-**Example**:
+**Example:**
 
 ```bash
 git branch
 ```
 
-**Output**:
+**Output:**
 
 ```bash
 * master
@@ -371,23 +356,21 @@ git branch
 
 ---
 
-## git checkout <branch-name>
+## 19. `git checkout <branch-name>`
 
-Switches to the specified branch.
-
-**Syntax**:
+**Syntax:**
 
 ```bash
 git checkout <branch-name>
 ```
 
-**Example**:
+**Example:**
 
 ```bash
 git checkout footer
 ```
 
-**Output**:
+**Output:**
 
 ```bash
 Switched to branch 'footer'
@@ -395,23 +378,21 @@ Switched to branch 'footer'
 
 ---
 
-## git merge <branch-name>
+## 20. `git merge <branch-name>`
 
-Merges changes from the given branch into the current branch.
-
-**Syntax**:
+**Syntax:**
 
 ```bash
 git merge <branch-name>
 ```
 
-**Example**:
+**Example:**
 
 ```bash
 git merge footer
 ```
 
-**Output**:
+**Output:**
 
 ```bash
 Auto-merging index.html
@@ -421,17 +402,15 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 ---
 
-## git add index.html
+## 21. `git add index.html`
 
-Adds a specific file (like index.html) to the staging area.
-
-**Syntax**:
+**Syntax:**
 
 ```bash
 git add index.html
 ```
 
-**Example**:
+**Example:**
 
 ```bash
 git add index.html
@@ -439,23 +418,21 @@ git add index.html
 
 ---
 
-## git commit -m "Index file with footer code"
+## 22. `git commit -m "Index file with footer code"`
 
-Commits a specific change with message.
-
-**Syntax**:
+**Syntax:**
 
 ```bash
-git commit -m "message"
+git commit -m "your message"
 ```
 
-**Example**:
+**Example:**
 
 ```bash
 git commit -m "Index file with footer code"
 ```
 
-**Output**:
+**Output:**
 
 ```bash
 [master c83634f] Index file with footer code
@@ -464,23 +441,21 @@ git commit -m "Index file with footer code"
 
 ---
 
-## git log
+## 23. `git log`
 
-Shows the commit history.
-
-**Syntax**:
+**Syntax:**
 
 ```bash
 git log
 ```
 
-**Example**:
+**Example:**
 
 ```bash
 git log
 ```
 
-**Output**:
+**Output:**
 
 ```bash
 commit b8c0cd7f9bfc...
@@ -492,17 +467,17 @@ Date:   Thu Jul 17 16:23:10 2025 +0530
 
 ---
 
-## BONUS: Common Mistyped Commands
+## 24. Bonus: Common Mistyped Commands
 
 ```bash
-git staus     # ❌ Wrong (should be 'status')
+git staus     # ❌ Wrong (should be 'git status')
 gir merge     # ❌ Wrong (should be 'git merge')
 girt add .    # ❌ Wrong (should be 'git add .')
 ```
 
 ---
 
-## Example Git Workflow
+## 25. Example Git Workflow
 
 ```bash
 # Create and switch to footer
