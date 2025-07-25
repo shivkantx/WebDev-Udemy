@@ -270,7 +270,7 @@ Tasks are stored as an array of objects:
 ]
 ```
 
-# Adding 10 Tasks to Your Todo Application by command prompt
+# Adding 10 Tasks to Todo Application by command prompt
 
 ## Execute Each Command Separately
 
