@@ -3,18 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index page</title>
+    <title>Index Page</title>
     <style>
       body {
+        margin: 0;
         background-color: #1a1a1a;
         color: #aaa;
+        font-family: Arial, sans-serif;
       }
+
       h1 {
         text-align: center;
+        margin-top: 20px;
+      }
+
+      .container {
+        display: flex;
+        height: 300px;
+        width: 100%;
+      }
+
+      #left {
+        flex: 1;
+        background-color: #535da0;
+      }
+
+      #right {
+        flex: 1;
+        background-color: #aaa5c7;
       }
     </style>
   </head>
   <body>
-    <h1>Welcome to my Index Section</h1>
+    <h1>Welcome to the Index Page</h1>
+    <div class="container">
+      <div id="left"></div>
+      <div id="right"></div>
+    </div>
   </body>
 </html>
