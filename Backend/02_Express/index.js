@@ -1,10 +1,31 @@
+import "dotenv/config";
+import logger from "./logger.js";
+import morgan from "morgan";
+
 // Import express module to create the server and handle routing
 import express from "express";
 
 const app = express(); // Creates the Express app instance
-const port = 3000; // Port where the server will run
+const port = process.env.PORT || 3000; // Port where the server will run
 
 app.use(express.json()); // Middleware to parse JSON bodies
+const morganFormat = ":method :url :status :response-time ms";
+
+app.use(
+  morgan(morganFormat, {
+    stream: {
+      write: (message) => {
+        const logObject = {
+          method: message.split(" ")[0],
+          url: message.split(" ")[1],
+          status: message.split(" ")[2],
+          responseTime: message.split(" ")[3],
+        };
+        logger.info(JSON.stringify(logObject));
+      },
+    },
+  })
+);
 
 // In-memory storage for tea items
 let teaData = [];
