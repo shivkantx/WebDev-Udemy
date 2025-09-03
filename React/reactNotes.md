@@ -1,45 +1,45 @@
----
-
 ## 🔄 Component Lifecycle
 
 ### Lifecycle with Hooks (Modern Approach)
+
 ```jsx
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const LifecycleComponent = () => {
   const [data, setData] = useState(null);
 
   // Component Did Mount (runs once)
   useEffect(() => {
-    console.log('Component mounted');
+    console.log("Component mounted");
     fetchData();
-    
+
     // Component Will Unmount (cleanup)
     return () => {
-      console.log('Component will unmount');
+      console.log("Component will unmount");
     };
   }, []);
 
   // Component Did Update (runs on specific dependency change)
   useEffect(() => {
-    console.log('Data updated:', data);
+    console.log("Data updated:", data);
   }, [data]);
 
   // Component Did Update (runs on every render)
   useEffect(() => {
-    console.log('Component updated');
+    console.log("Component updated");
   });
 
   const fetchData = async () => {
-    const response = await fetch('/api/data');
+    const response = await fetch("/api/data");
     setData(await response.json());
   };
 
-  return <div>{data ? JSON.stringify(data) : 'Loading...'}</div>;
+  return <div>{data ? JSON.stringify(data) : "Loading..."}</div>;
 };
 ```
 
 ### Class Component Lifecycle (Legacy Reference)
+
 ```jsx
 class LifecycleClass extends React.Component {
   constructor(props) {
@@ -48,28 +48,28 @@ class LifecycleClass extends React.Component {
   }
 
   componentDidMount() {
-    console.log('Component mounted');
+    console.log("Component mounted");
     this.fetchData();
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.data !== this.state.data) {
-      console.log('Data updated');
+      console.log("Data updated");
     }
   }
 
   componentWillUnmount() {
-    console.log('Component will unmount');
+    console.log("Component will unmount");
   }
 
   fetchData = async () => {
-    const response = await fetch('/api/data');
+    const response = await fetch("/api/data");
     const data = await response.json();
     this.setState({ data });
   };
 
   render() {
-    return <div>{this.state.data || 'Loading...'}</div>;
+    return <div>{this.state.data || "Loading..."}</div>;
   }
 }
 ```
