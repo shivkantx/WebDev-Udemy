@@ -8,26 +8,29 @@ function TodoForm() {
   const add = (e) => {
     e.preventDefault();
 
-    if (!todo) return;
+    if (!todo.trim()) return;
 
     addTodo({ todo, completed: false });
     setTodo("");
   };
 
   return (
-    <form onSubmit={add} className="flex">
+    <form
+      onSubmit={add}
+      className="flex items-center gap-2 bg-gradient-to-r from-purple-400/70 to-purple-600/70 rounded-xl p-2 shadow-md"
+    >
       <input
         type="text"
-        placeholder="Write Todo..."
-        className="w-full border border-black/10 rounded-l-lg px-3 outline-none duration-150 bg-white/20 py-1.5"
+        placeholder="✍️ Add a new task..."
+        className="flex-1 rounded-lg px-3 py-2 bg-white/20 placeholder-white/70 text-white text-lg font-medium outline-none focus:ring-2 focus:ring-white/80 transition"
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
       />
       <button
         type="submit"
-        className="rounded-r-lg px-3 py-1 bg-green-600 text-white shrink-0"
+        className="px-5 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white font-semibold shadow-md transition"
       >
-        Add
+        ➕ Add
       </button>
     </form>
   );
